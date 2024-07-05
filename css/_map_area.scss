@@ -1,0 +1,168 @@
+main {
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: 'SairaCondensed';
+    width: 100%;
+}
+
+#map {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
+    height: 1000px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+
+.product_info {
+    flex: 0 0 400px;
+    max-width: 400px;
+    min-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the map and product info panel are responsive */
+@media (max-width: 1200px) {
+    #map {
+        height: auto;
+    }
+}
+
+@media (max-width: 750px) {
+    main{
+        flex-wrap: wrap;
+    }
+    #map {
+        height: 600px;
+    }
+    .product_info {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #map {
+        height: 400px;
+    }
+    .product_info {
+        padding: 10px;
+        margin: 5px;
+    }
+}
+
+/* Styles for the product_info content */
+.product_info .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product_info .user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.product_info .user img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.product_info .user p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.product_info .user .name {
+    font-weight: bold;
+}
+
+.product_info .break {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.product_info .break hr {
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.product_info .item_name,
+.product_info .condition,
+.product_info .quantity,
+.product_info .price_range,
+.product_info .description {
+    margin-bottom: 15px;
+}
+
+.product_info label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.product_info input[type="text"],
+.product_info input[type="number"],
+.product_info select,
+.product_info textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.product_info input[type="text"]::placeholder,
+.product_info input[type="number"]::placeholder,
+.product_info textarea::placeholder {
+    color: #888;
+}
+
+.product_info textarea {
+    resize: vertical;
+}
+
+.product_info .price_range .price_inputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product_info .price_range .price_inputs input[type="number"] {
+    flex: 1;
+}
+
+.product_info .price_range .price_inputs span {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.form-group.submit {
+    text-align: center; /* Centers the button */
+    margin-top: 20px; /* Adds some space above the button */
+}
+
+.form-group.submit .search_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-green2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.product_info .search_button:hover {
+    background-color: var(--primary-green);
+}

@@ -1,0 +1,118 @@
+/* Overall style for the create_buyer popup */
+main .user_login {
+    font-family: 'SairaCondensed', sans-serif;
+    border-radius: 15px;
+    background-color: var(--primary-blue);
+    /* Teal background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    padding: 20px;
+    z-index: 2;
+    color: white;
+}
+
+/* Heading styles */
+main .user_login .heading {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+main .user_login .heading i {
+    position: absolute;
+    font-size: 20px;
+    right: 30px;
+}
+
+main .user_login .heading p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Account section styles */
+main .user_login .acc {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Common input styles */
+main .user_login .acc input[type="text"],
+main .user_login .acc input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+/* Section styles */
+main .user_login .acc .username,
+main .user_login .acc .password {
+    margin-bottom: 15px;
+}
+
+/* Label styles */
+main .user_login .acc label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #E0F2F1;
+}
+
+/* Terms and conditions styles */
+main .user_login .acc .terms input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+main .user_login .acc .terms label {
+    font-weight: normal;
+    color: #E0F2F1;
+}
+
+/* Submit button styles */
+main .user_login .acc .submit {
+    text-align: center;
+    margin-top: 20px;
+}
+
+main .user_login .acc .submit button {
+    background-color: #E0F2F1;
+    color: var(--secondary-blue);
+    border: 2px solid var(--secondary-blue);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main .user_login .acc .submit button:hover {
+    background-color: var(--secondary-blue);
+    color: #E0F2F1;
+}
+
+/* Error message styles */
+main .user_login .acc .error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 750px) {
+    main .user_login {
+        width: 80%;
+        top: 300px;
+        left: 10%;
+        transform: translate(0, 0);
+    }
+}

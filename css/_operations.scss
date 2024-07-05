@@ -1,0 +1,128 @@
+#tabbed-services {
+    height: 600px;
+    padding-top: 70px;
+}
+
+.services {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-green);
+    margin-top: 20px;
+}
+
+.operations {
+    // max-width: 100rem;
+    margin: 12rem auto 0 auto;
+    border-top: 1px solid rgb(125, 125, 125);
+    border-bottom: 1px solid rgb(125, 125, 125);
+    margin: 100px 0;
+}
+
+.operations__tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.operations__tab {
+    height: 30px;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+    transform: translateY(-50%);
+}
+
+.operations__tab span {
+    margin-right: 1rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.operations__tab--1 {
+    background-color: var(--primary-yellow);
+}
+
+.operations__tab--1 hover {
+    background-color: var(--primary-yellow);
+}
+
+.operations__tab--2 {
+    background-color: var(--secondary-green);
+}
+
+.operations__tab--2 hover {
+    background-color: var(--secondary-green);
+}
+
+.operations__tab--3 {
+    background-color: var(--primary-red);
+}
+
+.operations__tab--3 hover {
+    background-color: var(--secondary-red);
+}
+
+.operation__tab--active {
+    transform: translateY(-66%);
+}
+
+.operations__content {
+    display: none;
+    align-items: center;
+    width: 60%;
+    height: 300px;
+    // background-color: #03d71c;
+    margin: 0px 20% 30px 20%;
+    padding: 2,5rem 7rem 6.5rem 7rem;
+}
+
+.operations__content--active {
+    display: inline-flex;
+}
+
+.operations__header {
+    font-size: 2.25rem;
+    font-weight: 500;
+    align-self: center;
+}
+
+.operations__icon{
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.operations__icon--1{
+    color: #d7cc03;
+}
+
+.operations__icon--2{
+    color: #03d71c;
+}
+
+.operations__icon--3{
+    color: #d70303;
+}
+
+@media (max-width: 750px) {
+    .operations__content {
+        width: 100%;
+        // height: 200px;
+        margin: 0px 0 30px 0;
+        padding: 0 2px;
+        // padding: 2,5rem 7rem 6.5rem 7rem;
+    }
+
+    .operations__tab p {
+        display: none;
+    }
+
+    .operations__tab-container {
+        gap: 1.5rem;
+    }
+
+    .operations__icon{
+        font-size: 25px;
+    }
+}

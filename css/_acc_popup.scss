@@ -1,0 +1,140 @@
+/* Overall style for the signup popup */
+main .signup {
+    font-family: 'SairaCondensed', sans-serif;
+    border-radius: 15px;
+    background-color: var(--primary-green);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    padding: 20px;
+    margin-top: 10px;
+    z-index: 2;
+    color: white;
+}
+
+/* Heading styles */
+main .signup .heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main .signup .heading p {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+main .signup .heading .cancel_signin{
+    background: transparent;
+    border: none;
+    float: right;
+    margin-top: 10px;
+    right: 5px;
+    width: 20px;
+}
+
+/* Account section styles */
+main .signup .acc {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Common input styles */
+main .signup .acc input[type="text"],
+main .signup .acc input[type="email"],
+main .signup .acc input[type="password"],
+main .signup .acc input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+/* Section styles */
+main .signup .acc .username,
+main .signup .acc .email,
+main .signup .acc .password,
+main .signup .acc .confirm-password,
+main .signup .acc .profile-picture,
+main .signup .acc .terms {
+    margin-bottom: 10px;
+}
+
+/* Label styles */
+main .signup .acc label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #E0F2F1;
+}
+
+main .signup .acc .terms{
+    display: flex;
+}
+
+/* Terms and conditions styles */
+main .signup .acc .terms input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+main .signup .acc .terms label {
+    padding-top: 5px;
+    font-weight: normal;
+    color: #E0F2F1;
+}
+
+/* Submit button styles */
+main .signup .acc .submit {
+    text-align: center;
+    margin-top: 20px;
+}
+
+main .signup .acc .submit button {
+    background-color: #E0F2F1;
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+main .signup .acc .submit button:hover {
+    background-color: var(--secondary-green);
+    color: white;
+}
+
+/* Error message styles */
+main .signup .acc .error-message {
+    color: var(--primary-red);
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 1250px){
+    main .signup {
+        width: 50%;
+    margin-top: 10px;
+    }
+}
+
+@media (max-width: 1000px){
+    main .signup {
+        width: 80%;
+    }
+}
+
+@media (max-width: 750px){
+    main .signup {
+        width: 90%;
+        margin-top: 0;
+    }
+}

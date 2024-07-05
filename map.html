@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-nexus</title>
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://kit.fontawesome.com/b242efe63b.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">
+                <img href="index.html" src="Images/Logos/E-Nexus_transparent.png" alt="">
+            </div>
+        </a>
+        <div class="icons">
+            <div>
+                <a href="chats.html">
+                    <i class="fa-regular fa-comment" style="color: #000000;"></i>
+                </a>
+            </div>
+            <div>
+                <a href="notifications.html">
+                    <i class="fa-regular fa-bell" style="color: #000000;"></i>
+                </a>
+            </div>
+            <div>
+                <a href="help.html">
+                    <i class="fa-regular fa-question" style="color: #000000;"></i>
+                </a>
+            </div>
+            <div>
+                <a href="seller_account_page.html">
+                    <div class="profile_icon">
+                        <img src="" alt="icon"
+                            onerror="this.src='Images/user-solid-small.png'; style='padding: 0 3px; background-color: rgb(200, 200, 200);'">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <i class="fa-solid fa-bars menu" id="menu-icon" style="color: #000000;"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="side-panel">
+            <ul class="user_info"><br>
+                <li>
+                    <a class="my_account" href="account_page.html">
+                        <i class="fa-regular fa-user" style="color: #000000;"></i>
+                        <p id="description">My account</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="map" href="#">
+                        <i class="fa-solid fa-map-location-dot" style="color: #000000;"></i>
+                        <p id="description" class="active">Map</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="item_summary" href="item-summary.html">
+                        <i class="fa-solid fa-layer-group" style="color: #000000;"></i>
+                        <p id="description">Item summary</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="withdraw_coins" href="withdraw_page.html">
+                        <i class="fa-solid fa-money-bill-transfer" style="color: #000000;"></i>
+                        <p id="description">Withdraw coins</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="settings" href="settings.html">
+                        <i class="fa-solid fa-gear" style="color: #000000;"></i>
+                        <p id="description">Settings</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="chats" href="chats.html">
+                        <i class="fa-regular fa-comment" style="color: #000000;"></i>
+                        <p id="description">Chats</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <ul id="drop-down" class="menu-options hidden">
+            <li>
+                <a class="my_account" href="seller_account_page.html">
+                    <i class="fa-regular fa-user" style="color: #000000;"></i>
+                    <p id="description" class="active">My account</p>
+                </a>
+            </li>
+            <li>
+                <a class="item_summary" href="#">
+                    <i class="fa-solid fa-layer-group" style="color: #000000;"></i>
+                    <p id="description">Item summary</p>
+                </a>
+            </li>
+            <li>
+                <a class="withdraw_coins" href="withdraw_page.html">
+                    <i class="fa-solid fa-money-bill-transfer" style="color: #000000;"></i>
+                    <p id="description">Withdraw coins</p>
+                </a>
+            </li>
+            <li>
+                <a class="settings" href="settings.html">
+                    <i class="fa-solid fa-gear" style="color: #000000;"></i>
+                    <p id="description">Settings</p>
+                </a>
+            </li>
+            <li>
+                <a class="chats" href="chats.html">
+                    <i class="fa-regular fa-comment" style="color: #000000;"></i>
+                    <p id="description">Chats</p>
+                </a>
+            </li>
+        </ul>
+        <div id="map"></div>
+
+        <div class="product_info">
+            <div class="logo">
+                <img src="path_to_logo" alt="Logo">
+            </div>
+
+            <div class="user">
+                <img src="path_to_avatar" alt="User Avatar">
+                <p>Hello, <span class="name">User</span></p>
+            </div>
+
+            <div class="break">
+                <hr>
+                <br>
+                <p>Input description of item to search</p>
+            </div>
+
+            <form id="itemForm">
+                <div class="form-group item_name">
+                    <label for="item_name">Item name:</label>
+                    <input type="text" class="item_input" name="item_input" id="item_name" placeholder="Enter item name"
+                        required>
+                </div>
+
+                <div class="form-group condition">
+                    <label for="condition">Condition:</label>
+                    <select id="condition" name="condition">
+                        <option value="2nd_hand" selected>2nd hand</option>
+                        <option value="new">New</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group quantity">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="0" max="99" value="1"
+                        placeholder="Enter quantity">
+                </div>
+
+                <div class="form-group price_range">
+                    <label for="price_min">Price range:</label>
+                    <div class="price_inputs">
+                        <input type="number" id="price_min" name="price_min" min="0" placeholder="Min price">
+                        <span>to</span>
+                        <input type="number" id="price_max" name="price_max" min="0" placeholder="Max price">
+                    </div>
+                </div>
+
+                <div class="form-group description">
+                    <label for="description">Description:</label>
+                    <textarea name="description" id="description" cols="25" rows="5"
+                        placeholder="Enter description"></textarea>
+                </div>
+
+                <div class="form-group submit">
+                    <button type="submit" class="search_button">Search</button>
+                </div>
+
+            </form>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="call-to-action">
+            <p>READY TO JOIN <br>
+                THE GREEN <br>
+                MOVEMENT?</p>
+        </div>
+        <div class="socials">
+            <i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+        </div>
+        <div class="rights">
+            <small><a href="mailto:enexus.sustainability@gmail.com">enexus.sustainability@gmail.com</a></small> <br>
+            &copy; copyright reserved
+        </div>
+    </footer>
+
+    <script defer src="js/handle-global-functions.js"></script>
+</body>
+
+</html>

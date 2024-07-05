@@ -1,0 +1,288 @@
+/* User view panel */
+
+main {
+    width: 100%;
+    display: inline-flex;
+}
+
+.view_area {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.user_data {
+    justify-content: space-evenly;
+    width: 90%;
+    display: inline-flex;
+    box-shadow: 2px 2px 10px 1px grey, -2px -2px 10px 1px grey;
+}
+
+.profile ul {
+    list-style: none;
+    display: grid;
+    justify-content: center;
+    height: auto;
+    margin: 10px;
+    padding: 5px;
+}
+
+.profile .image_profile img {
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid grey;
+}
+
+.profile .name {
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile .title1 {
+    font-size: 1.1em;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.profile .title2 {
+    font-size: 1.1em;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.profile button {
+    background-color: var(--primary-green);
+    color: white;
+    font-size: 1.5em;
+    width: 75%;
+    height: 50px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 12.5%;
+    border-radius: 10px;
+}
+
+.vl {
+    margin: 10px 0;
+    background-color: grey;
+    width: 0.5px;
+    box-shadow: 0px 2px 10px 0px grey, 0px -2px 10px 0px grey;
+}
+
+.personal_data {
+    margin: 10px;
+    padding: 5px;
+}
+
+.personal_data .title {
+    font-size: 1.1em;
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+    font-size: 1.4em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.personal_data .contact {
+    font-size: 1.1em;
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.personal_data .contact_number {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+    font-size: 1.4em;
+}
+
+.personal_data .address {
+    font-size: 1.1em;
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.personal_data .location {
+    margin-bottom: 20px;
+    width: 100%;
+    display: inline-flex;
+}
+
+.personal_data .address_area {
+    padding-right: 10px;
+    font-size: 1.1em;
+    text-align: left;
+    margin-top: 5px;
+    font-size: 1.4em;
+}
+
+.personal_data .separate {
+    padding-right: 10px;
+    font-size: 1.1em;
+    text-align: left;
+    margin-top: 5px;
+    font-size: 1.4em;
+}
+
+.personal_data .address_region {
+    font-size: 1.1em;
+    text-align: left;
+    margin-top: 5px;
+    font-size: 1.4em;
+}
+
+/* User data summary */
+
+.account_summary {
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.top_part,
+.bottom_part {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+    height: 250px;
+}
+
+.account_summary .coins,
+.sold,
+.stock,
+.approval_rating {
+    display: inline-flex;
+    width: 250px;
+    height: 150px;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.account_summary .coins {
+    box-shadow: 0 0 20px 0 yellow, 0 0 20px 0 yellow;
+}
+
+.account_summary .stock {
+    box-shadow: 0 0 20px 0 green, 0 0 20px 0 green;
+}
+
+.account_summary .sold {
+    box-shadow: 0 0 20px 0 red, 0 0 20px 0 red;
+}
+
+.account_summary .approval_rating {
+    box-shadow: 0 0 20px 0 blue, 0 0 20px 0 blue;
+}
+
+.account_summary .coins_icon,
+.stock_icon,
+.sold_icon,
+.approval_rating_icon{
+    width: 80px;
+    height: 80px;
+    display: grid;
+    justify-content: center;
+}
+
+.account_summary i {
+    font-size: 80px;
+}
+
+.numbers{
+    margin-top: 10px;
+    text-align: center;
+    width: 120px;
+}
+
+.account_summary .coins_title,
+.stock_title,
+.sold_title,
+.approval_rating_title {
+    font-size: 1.5em;
+}
+
+.account_summary .coins_amount,
+.stock_amount,
+.sold_amount,
+.approval_rating_amount {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Mini size */
+
+@media (max-width:750px) {
+    .view_area {
+        display: block;
+    }
+
+    .profile img {
+        margin: 20px auto;
+        display: grid;
+    }
+
+    .profile .name,
+    .profile .title1,
+    .profile .title2 {
+        font-size: 1.5em;
+    }
+
+    .profile button {
+        width: 200px;
+        margin: 10px auto;
+    }
+
+    .user_data {
+        width: auto;
+        margin: 20px;
+        display: block;
+        box-shadow: 2px 2px 10px 1px grey, -2px -2px 10px 1px grey;
+    }
+
+    .vl,
+    .separate {
+        display: none;
+    }
+
+    .personal_data #address_info,
+    .address_area,
+    .address_region,
+    #info {
+        display: grid;
+        justify-content: center;
+    }
+
+    .account_summary {
+        width: 100%;
+    }
+
+    .account_summary .top_part,
+    .bottom_part {
+        display: grid;
+        width: auto;
+        height: auto;
+    }
+
+    .coins,
+    .stock,
+    .sold,
+    .approval_rating {
+        margin: 50px 0;
+    }
+}

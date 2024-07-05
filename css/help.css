@@ -1,0 +1,218 @@
+header {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  background-color: var(--theme-color);
+  justify-content: center;
+}
+
+header .icons {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  left: 70%;
+  margin-bottom: 15px;
+}
+
+header .icons a {
+  align-items: center;
+  display: inline-flex;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+header .icons p {
+  margin-right: 10px;
+}
+
+header a:hover {
+  font-weight: bold;
+}
+
+header div {
+  display: inline-flex;
+}
+
+.logo {
+  height: 200px;
+  justify-content: center;
+}
+
+@media (max-width: 780px) {
+  header {
+    display: inline-flex;
+    height: 80px;
+  }
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 80px;
+    justify-content: center;
+  }
+  header .icons {
+    margin: 0;
+    top: 10px;
+    left: 100px;
+  }
+}
+@font-face {
+  src: url("../fonts/SairaCondensed-Medium.ttf");
+  font-family: "SairaCondensed";
+}
+:root {
+  --theme-color: rgba(10, 99, 19, 1);
+  --theme-color2: #007bff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+* {
+  font-family: "SairaCondensed";
+}
+
+main {
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  min-width: 80%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+main .topics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  row-gap: 50px;
+}
+
+main .topics .help-title {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
+  margin: 30px 0 40px 0;
+}
+
+main .topic {
+  padding: 5px;
+  width: 280px;
+  height: 320px;
+  box-shadow: 2px 2px 5px rgb(159, 159, 159), -2px -2px 5px rgb(159, 159, 159);
+  text-align: center;
+}
+
+main .topic i {
+  font-size: 6em;
+  margin: 20px 0;
+}
+
+main .topic p {
+  text-align: justify;
+}
+
+main .topic a {
+  text-decoration: none;
+  color: var(--theme-color2);
+}
+
+main .topic a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 780px) {
+  main {
+    width: fit-content;
+  }
+  main .topics {
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  main .topics .help-title {
+    margin: 30px 0 0 0;
+  }
+}
+footer {
+  display: grid;
+  width: 100%;
+  height: 200px;
+  background-color: var(--theme-color);
+  align-items: center;
+}
+
+footer .call-to-action {
+  position: absolute;
+  font-family: "SairaCondensed";
+  font-weight: bold;
+  color: white;
+  font-size: 2em;
+  margin: 20px 0 0 100px;
+}
+
+.rights {
+  height: 40px;
+  text-align: center;
+  color: white;
+}
+
+.rights a {
+  color: white;
+  font-size: 0.8em;
+}
+
+footer .socials {
+  position: absolute;
+  right: 0;
+  height: 20px;
+  margin: 40px 40px 0 0;
+}
+
+footer .socials i {
+  margin: 0 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  footer {
+    height: 230px;
+    margin: 0;
+    display: grid;
+    justify-content: center;
+  }
+  footer .call-to-action {
+    font-size: 1.7em;
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 0;
+  }
+  footer .socials {
+    position: relative;
+    text-align: center;
+    margin: 10px 0;
+  }
+  footer .rights {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    height: fit-content;
+  }
+}
+
+/*# sourceMappingURL=help.css.map */

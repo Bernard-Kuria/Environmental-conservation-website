@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seller</title>
+    <link rel="stylesheet" href="css/items.css">
+    <script src="https://kit.fontawesome.com/b242efe63b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">
+                <img src="Images/Logos/E-Nexus_transparent.png" alt="">
+            </div>
+        </a>
+        <div class="icons">
+            <div>
+                <a href="chats.html">
+                    <i class="fa-regular fa-comment" style="color: #000000;"></i>
+                </a>
+            </div>
+            <div>
+                <a href="notifications.html">
+                    <i class="fa-regular fa-bell" style="color: #000000;"></i>
+                </a>
+            </div>
+            <div>
+                <a href="help.html">
+                    <i class="fa-regular fa-question" style="color: #000000;"></i>
+                </a>
+            </div>
+            <div>
+                <a href="seller_account_page.html">
+                    <div class="profile_icon">
+                        <img src="" alt="icon"
+                            onerror="this.src='Images/user-solid-small.png'; style='padding: 0 3px; background-color: rgb(200, 200, 200);'">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <i class="fa-solid fa-bars menu" id="menu-icon" style="color: #000000;"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="side-panel">
+            <ul class="user_info">
+                <br>
+                <li>
+                    <a class="my_account" href="account_page.html">
+                        <i class="fa-regular fa-user" style="color: #000000;"></i>
+                        <p id="description">My account</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="map" href="map.html">
+                        <i class="fa-solid fa-map-location-dot" style="color: #000000;"></i>
+                        <p id="description">Map</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="item_summary" href="#">
+                        <i class="fa-solid fa-layer-group" style="color: #000000;"></i>
+                        <p id="description" class="active">Item summary</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="withdraw_coins" href="withdraw_page.html">
+                        <i class="fa-solid fa-money-bill-transfer" style="color: #000000;"></i>
+                        <p id="description">Withdraw coins</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="settings" href="settings.html">
+                        <i class="fa-solid fa-gear" style="color: #000000;"></i>
+                        <p id="description">Settings</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="chats" href="chats.html">
+                        <i class="fa-regular fa-comment" style="color: #000000;"></i>
+                        <p id="description">Chats</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <ul id="drop-down" class="menu-options hidden">
+            <li>
+                <a class="my_account" href="seller_account_page.html">
+                    <i class="fa-regular fa-user" style="color: #000000;"></i>
+                    <p id="description" class="active">My account</p>
+                </a>
+            </li>
+            <li>
+                <a class="item_summary" href="#">
+                    <i class="fa-solid fa-layer-group" style="color: #000000;"></i>
+                    <p id="description">Item summary</p>
+                </a>
+            </li>
+            <li>
+                <a class="withdraw_coins" href="withdraw_page.html">
+                    <i class="fa-solid fa-money-bill-transfer" style="color: #000000;"></i>
+                    <p id="description">Withdraw coins</p>
+                </a>
+            </li>
+            <li>
+                <a class="settings" href="settings.html">
+                    <i class="fa-solid fa-gear" style="color: #000000;"></i>
+                    <p id="description">Settings</p>
+                </a>
+            </li>
+            <li>
+                <a class="chats" href="chats.html">
+                    <i class="fa-regular fa-comment" style="color: #000000;"></i>
+                    <p id="description">Chats</p>
+                </a>
+            </li>
+        </ul>
+
+        <div class="items_display">
+            <h2 class="upload-item-button">upload new item</h2>
+            <!-- list view -->
+            <button id="list">
+                <i class="fa-solid fa-list" style="color: #000000;"></i>
+            </button>
+            <!-- grid view -->
+            <button id="grid">
+                <i class="fa-solid fa-table-cells"></i>
+            </button>
+
+            <div id="items">
+                <!-- Grid view -->
+                <ul id="grid-view">
+                    <li id="item">
+                        <a href="#">
+                            <div class="item_img">
+                                <img src="path_to_placeholder_image.jpg" alt="Item Image">
+                            </div>
+                        </a>
+                        <div class="item_name"><a href="#">Item 1</a></div>
+                    </li>
+                    <li id="item">
+                        <a href="#">
+                            <div class="item_img">
+                                <img src="path_to_placeholder_image.jpg" alt="Item Image">
+                            </div>
+                        </a>
+                        <div class="item_name"><a href="#">Item 1</a></div>
+                    </li>
+                    <li id="item">
+                        <a href="#">
+                            <div class="item_img">
+                                <img src="path_to_placeholder_image.jpg" alt="Item Image">
+                            </div>
+                        </a>
+                        <div class="item_name"><a href="#">Item 1</a></div>
+                    </li>
+                    <li id="item">
+                        <a href="#">
+                            <div class="item_img">
+                                <img src="path_to_placeholder_image.jpg" alt="Item Image">
+                            </div>
+                        </a>
+                        <div class="item_name"><a href="#">Item 1</a></div>
+                    </li>
+                    <li id="item">
+                        <a href="#">
+                            <div class="item_img">
+                                <img src="path_to_placeholder_image.jpg" alt="Item Image">
+                            </div>
+                        </a>
+                        <div class="item_name"><a href="#">Item 1</a></div>
+                    </li>
+                </ul>
+
+                <!-- List view (initially hidden) -->
+                <ul id="list-view" class="hidden-view">
+                    <li id="list-item">
+                        <div class="list_item">
+                            <a href="#">
+                                <div class="item_img">
+                                    <img src="path_to_placeholder_image.jpg" alt="Item Image">
+                                </div>
+                            </a>
+                            <div id="description-container">
+                                <div class="item-name">name</div>
+                                <div id="item-description">
+                                    <div class="item-quantity">
+                                        <p class="quantity-title">quantity:</p>
+                                        <p id="quantity">0</p>
+                                    </div>
+                                    <p>|</p>
+                                    <div class="item-condition">
+                                        <p class="condition-title">condition:</p>
+                                        <p id="condition">0</p>
+                                    </div>
+                                    <p>|</p>
+                                    <button>view more</button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="hidden-item">
+                    </li>
+                    <li id="list-item">
+                        <div class="list_item">
+                            <a href="#">
+                                <div class="item_img">
+                                    <img src="path_to_placeholder_image.jpg" alt="Item Image">
+                                </div>
+                            </a>
+                            <div id="description-container">
+                                <div class="item-name">name</div>
+                                <div id="item-description">
+                                    <div class="item-quantity">
+                                        <p class="quantity-title">quantity:</p>
+                                        <p id="quantity">0</p>
+                                    </div>
+                                    <p>|</p>
+                                    <div class="item-condition">
+                                        <p class="condition-title">condition:</p>
+                                        <p id="condition">0</p>
+                                    </div>
+                                    <p>|</p>
+                                    <button>view more</button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="hidden-item">
+                    </li>
+                    <li id="list-item">
+                        <div class="list_item">
+                            <a href="#">
+                                <div class="item_img">
+                                    <img src="path_to_placeholder_image.jpg" alt="Item Image">
+                                </div>
+                            </a>
+                            <div id="description-container">
+                                <div class="item-name">name</div>
+                                <div id="item-description">
+                                    <div class="item-quantity">
+                                        <p class="quantity-title">quantity:</p>
+                                        <p id="quantity">0</p>
+                                    </div>
+                                    <p>|</p>
+                                    <div class="item-condition">
+                                        <p class="condition-title">condition:</p>
+                                        <p id="condition">0</p>
+                                    </div>
+                                    <p>|</p>
+                                    <button>view more</button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="hidden-item">
+                    </li>
+                    <li id="list-item">
+                        <div class="list_item">
+                            <a href="#">
+                                <div class="item_img">
+                                    <img src="path_to_placeholder_image.jpg" alt="Item Image">
+                                </div>
+                            </a>
+                            <div id="description-container">
+                                <div class="item-name">name</div>
+                                <div id="item-description">
+                                    <div class="item-quantity">
+                                        <p class="quantity-title">quantity:</p>
+                                        <p id="quantity">0</p>
+                                    </div>
+                                    <p>|</p>
+                                    <div class="item-condition">
+                                        <p class="condition-title">condition:</p>
+                                        <p id="condition">0</p>
+                                    </div>
+                                    <p>|</p>
+                                    <button>view more</button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="hidden-item">
+                    </li>
+                    <li id="list-item">
+                        <div class="list_item">
+                            <a href="#">
+                                <div class="item_img">
+                                    <img src="path_to_placeholder_image.jpg" alt="Item Image">
+                                </div>
+                            </a>
+                            <div id="description-container">
+                                <div class="item-name">name</div>
+                                <div id="item-description">
+                                    <div class="item-quantity">
+                                        <p class="quantity-title">quantity:</p>
+                                        <p id="quantity">0</p>
+                                    </div>
+                                    <p>|</p>
+                                    <div class="item-condition">
+                                        <p class="condition-title">condition:</p>
+                                        <p id="condition">0</p>
+                                    </div>
+                                    <p>|</p>
+                                    <button>view more</button>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="hidden-item">
+                    </li>
+                </ul>
+            </div>
+
+            <div id="upload-item" class="upload_new_item_popup hidden-view">
+                <div class="upload_title">
+                    <h2>Add new item to your collection</h2>
+                    <i id="upload-cancel" class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="form-group">
+                    <label for="item_name">
+                        <h4>Item name:</h4>
+                    </label>
+                    <input type="text" class="item_input" name="item_input" id="item_name" placeholder="Enter item name">
+                </div>
+                <div class="form-group">
+                    <label for="quantity">
+                        <h4>Quantity:</h4>
+                    </label>
+                    <input type="number" class="quantity_input" name="quantity_input" id="quantity" placeholder="Enter quantity">
+                </div>
+                <div class="form-group">
+                    <label for="condition">
+                        <h4>Condition:</h4>
+                    </label>
+                    <input type="text" class="condition_input" name="condition_input" id="condition" placeholder="Enter condition">
+                </div>
+                <div class="form-group">
+                    <label for="price">
+                        <h4>Price:</h4>
+                    </label>
+                    <input type="number" class="price_input" name="price_input" id="price" placeholder="Enter price">
+                </div>
+                <div class="form-group">
+                    <label for="description">
+                        <h4>Description:</h4>
+                    </label>
+                    <textarea class="description_input" name="description_input" id="description" cols="30" rows="3"
+                        placeholder="Enter description"></textarea>
+                </div>
+                <div class="upload_title">
+                    <h4>Upload primary image</h4>
+                </div>
+                <div class="upload_image primary_image">
+                    <label for="primary_image"><i class="fa-solid fa-upload"></i></label>
+                    <input type="file" class="file_input" name="primary_image" id="primary_image" accept="image/*">
+                </div>
+                <div class="upload_title">
+                    <h4>Upload additional photos</h4>
+                </div>
+                <div class="additional_photos_container">
+                    <div class="upload_image additional_photo">
+                        <label for="additional_photos"><i class="fa-solid fa-upload"></i></label>
+                        <input type="file" class="file_input" name="additional_photos" id="additional_photos" accept="image/*" multiple>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="upload_button">
+                        <h4>Upload</h4>
+                    </button>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <footer>
+        <div class="call-to-action">
+            <p>READY TO JOIN <br>
+                THE GREEN <br>
+                MOVEMENT?</p>
+        </div>
+        <div class="socials">
+            <i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+        </div>
+        <div class="rights">
+            <small><a href="mailto:enexus.sustainability@gmail.com">enexus.sustainability@gmail.com</a></small> <br>
+            &copy; copyright reserved
+        </div>
+    </footer>
+    <script src="js/handle-global-functions.js"></script>
+    <script src="js/item_Summary.js"></script>
+</body>
+
+</html>

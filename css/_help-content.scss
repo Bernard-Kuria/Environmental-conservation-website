@@ -1,0 +1,70 @@
+* {
+    font-family: 'SairaCondensed';
+}
+
+main {
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+    min-width: 80%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+main .topics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    row-gap: 50px;
+}
+
+main .topics .help-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    margin: 30px 0 40px 0;
+}
+
+main .topic {
+    padding: 5px;
+    width: 280px;
+    height: 320px;
+    box-shadow: 2px 2px 5px rgb(159, 159, 159), -2px -2px 5px rgb(159, 159, 159);
+    text-align: center;
+}
+
+main .topic i {
+    font-size: 6em;
+    margin: 20px 0;
+}
+
+main .topic p {
+    text-align: justify;
+}
+
+main .topic a {
+    text-decoration: none;
+    color: var(--primary-green2);
+}
+
+main .topic a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 780px) {
+    main {
+        width: fit-content;
+    }
+    
+    main .topics{
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    main .topics .help-title {
+        margin: 30px 0 0 0;
+    }
+}

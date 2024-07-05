@@ -1,0 +1,37 @@
+@font-face {
+    src: url('../fonts/SairaCondensed-Medium.ttf');
+    font-family: 'SairaCondensed';
+}
+
+:root {
+    --primary-green: rgb(2, 134, 15);
+    --secondary-green: rgb(4, 176, 21);
+    --primary-red: rgb(255, 0, 0);
+    --secondary-red: rgb(237, 93, 93);
+    --primary-yellow: rgb(255, 238, 0);
+    --secondary-yellow: rgb(246, 255, 70);
+    --primary-blue: #0f66b3;
+    --secondary-blue: rgb(0, 21, 255);
+    --primary-grey: rgb(235, 235, 235);
+    --secondary-grey: rgb(150, 150, 150);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'SairaCondensed';
+  }
+
+.hidden{
+    display: none;
+}
+
+main {
+    height: auto;
+}
+
+i {
+    cursor: pointer;
+    color: var(--secondary-grey);
+}

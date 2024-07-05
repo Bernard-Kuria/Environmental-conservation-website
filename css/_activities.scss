@@ -1,0 +1,132 @@
+.activities {
+    height: 700px;
+    padding-top: 70px;
+}
+
+.activities-container{
+    position: relative;
+    background-color: var(--primary-grey);
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.slider-wrapper {
+    width: 60%;
+    height: 500px;
+    display: grid;
+    align-items: center;
+}
+
+#block {
+    width: 100%;
+    color: var(--primary-green);
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.slide-container {
+    height: 100%;
+    padding: 20px;
+}
+
+.slide-container div {
+    float: left;
+    width: 50%;
+    height: 250px;
+    text-align: justify;
+}
+
+.description-image {
+    display: grid;
+    align-items: center;
+}
+
+.description-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: fill;
+}
+
+.slide-container .content {
+    padding: 10px;
+}
+
+#description-title {
+    margin-bottom: 20px;
+    color: var(--primary-green);
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+main i {
+    font-size: 1.5em;
+    color: var(--secondary-grey);
+    cursor: pointer;
+}
+
+.mini-view-icons {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 5px;
+    background-color: #878787;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: var(--primary-green);
+}
+
+@media(max-width: 975px) {
+    .activities {
+        padding: 0;
+    }
+
+    .mini-view-icons {
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        gap: 50%;
+    }
+
+    .pointer {
+        display: none;
+    }
+}
+
+@media(max-width: 750px) {
+
+    .slider-wrapper {
+        width: 100%;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .container img, .container .content {
+        width: 100%;
+        padding: 0 2px;
+        border-radius: 0;
+        margin: 20px 0;
+    }
+}

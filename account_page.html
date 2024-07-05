@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/seller-account.css">
+    <script src="https://kit.fontawesome.com/b242efe63b.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">
+                <img href="index.html" src="Images/Logos/E-Nexus_transparent-no-slogan.png" alt="">
+            </div>
+        </a>
+        <div class="icons">
+            <div>
+                <a href="chats.html">
+                    <i class="fa-regular fa-comment" style="color: #000000;"></i>
+                </a>
+            </div>
+            <div>
+                <a href="notifications.html">
+                    <i class="fa-regular fa-bell" style="color: #000000;"></i>
+                </a>
+            </div>
+            <div>
+                <a href="help.html">
+                    <i class="fa-regular fa-question" style="color: #000000;"></i>
+                </a>
+            </div>
+            <div>
+                <a href="seller_account_page.html">
+                    <div class="profile_icon">
+                        <img src="" alt="icon"
+                            onerror="this.src='Images/user-solid-small.png'; style='padding: 0 3px; background-color: rgb(200, 200, 200);'">
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <i class="fa-solid fa-bars menu" id="menu-icon" style="color: #000000;"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="side-panel">
+            <ul class="user_info">
+                <br>
+                <li>
+                    <a class="my_account" href="account_page.html">
+                        <i class="fa-regular fa-user" style="color: #000000;"></i>
+                        <p id="description" class="active">My account</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="map" href="map.html">
+                        <i class="fa-solid fa-map-location-dot" style="color: #000000;"></i>
+                        <p id="description">Map</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="item_summary" href="item-summary.html">
+                        <i class="fa-solid fa-layer-group" style="color: #000000;"></i>
+                        <p id="description">Item summary</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="withdraw_coins" href="withdraw_page.html">
+                        <i class="fa-solid fa-money-bill-transfer" style="color: #000000;"></i>
+                        <p id="description">Withdraw coins</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="settings" href="settings.html">
+                        <i class="fa-solid fa-gear" style="color: #000000;"></i>
+                        <p id="description">Settings</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="chats" href="chats.html">
+                        <i class="fa-regular fa-comment" style="color: #000000;"></i>
+                        <p id="description">Chats</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <ul id="drop-down" class="menu-options hidden">
+                <li>
+                    <a class="my_account" href="seller_account_page.html">
+                        <i class="fa-regular fa-user" style="color: #000000;"></i>
+                        <p id="description" class="active">My account</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="item_summary" href="item-summary.html">
+                        <i class="fa-solid fa-layer-group" style="color: #000000;"></i>
+                        <p id="description">Item summary</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="withdraw_coins" href="withdraw_page.html">
+                        <i class="fa-solid fa-money-bill-transfer" style="color: #000000;"></i>
+                        <p id="description">Withdraw coins</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="settings" href="">
+                        <i class="fa-solid fa-gear" style="color: #000000;"></i>
+                        <p id="description">Settings</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="chats" href="chats.html">
+                        <i class="fa-regular fa-comment" style="color: #000000;"></i>
+                        <p id="description">Chats</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="view_area">
+            <div class="user_data">
+                <div class="profile">
+                    <ul>
+                        <li class="image_profile"><img src="" alt="icon"
+                                onerror="this.src='Images/user-solid.svg'; style='background-size: cover; background-color: rgb(200, 200, 200)'">
+                        </li>
+                        <li class="name"> Seller name </li>
+                        <li class="title1">Repair guy</li>
+                        <li class="title2">Shop owner</li>
+                        <li><button id="edit-profile" onclick="">Edit profile</button></li>
+                    </ul>
+                </div>
+
+                <div class="vl"></div>
+                <div class="personal_data">
+                    <div id="info" class="title"> Personal information </div>
+                    <div id="info" class="contact"> Phone contact </div>
+                    <div id="info" class="contact_number"> +254 748 1998 67 </div>
+                    <div id="info" class="address"> Address </div>
+                    <div id="address_info" class="location">
+                        <div class="address_area"> Nyeri </div>
+                        <div class="separate"> | </div>
+                        <div class="address_region"> along Kimathi Way </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="account_summary">
+                <div class="top_part">
+                    <div class="coins">
+                        <i class="fa-solid fa-coins coins_icon" style="color: #000000;"></i>
+                        <div class="numbers">
+                            <div class="coins_title">Coins Earned</div>
+                            <div class="coins_amount">0</div>
+                        </div>
+                    </div>
+
+                    <div class="stock">
+                        <i class="fa-solid fa-cubes-stacked stock_icon" style="color: #000000;"></i>
+                        <div class="numbers">
+                            <div class="stock_title">Items in store</div>
+                            <div class="stock_amount">0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bottom_part">
+                    <div class="sold">
+                        <i class="fa-solid fa-hand-holding-dollar sold_icon" style="color: #000000;"></i>
+                        <div class="numbers">
+                            <div class="sold_title">Items sold</div>
+                            <div class="sold_amount">0</div>
+                        </div>
+                    </div>
+
+                    <div class="approval_rating">
+                        <i class="fa-solid fa-thumbs-up approval_rating_icon" style="color: #000000;"></i>
+                        <div class="numbers">
+                            <div class="approval_rating_title"> Clients Approvals</div>
+                            <div class="approval_rating_amount">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="call-to-action">
+            <p>READY TO JOIN <br>
+                THE GREEN <br>
+                MOVEMENT?</p>
+        </div>
+        <div class="socials">
+            <i class="fa-brands fa-x-twitter" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
+            <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+        </div>
+        <div class="rights">
+            <small><a href="mailto:enexus.sustainability@gmail.com">enexus.sustainability@gmail.com</a></small> <br>
+            &copy; copyright reserved
+        </div>
+    </footer>
+    <script src="js/handle-global-functions.js"></script>
+</body>
+
+</html>

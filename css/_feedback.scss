@@ -1,0 +1,82 @@
+.reviews {
+    padding: 70px 0;
+    height: 700px;
+}
+
+.reviews-container {
+    margin: 100px 0;
+    padding: 0 20%;
+    height: 600px;
+    align-items: center;
+    display: grid;
+    margin: 0 0 70px 0;
+}
+
+.reviews .arrow-icons {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+    gap: 50%;
+}
+
+.reviews i {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.feedback-title {
+    text-align: center;
+    top: -45px;
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--primary-green);
+    margin-bottom: 20px;
+}
+
+.reviews img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.response {
+    border: 1px solid grey;
+    padding: 5px;
+    height: 250px;
+    display: grid;
+    align-items: center;
+    text-align: justify;
+    margin-left: 50px;
+}
+
+.reviews .fa-quote-left, .reviews .fa-quote-right {
+    color: var(--primary-green);
+    font-size: 3em;
+}
+
+.reviews .fa-quote-left {
+    margin-left: 70px;
+}
+
+.reviews .fa-quote-right {
+    margin-left: 90%;
+    float: right;
+    right: 0;
+}
+
+@media (max-width: 750px) {
+    .reviews {
+        padding: 0 5px;
+        font-size: 1em;
+    }
+
+    .feedback-title {
+        font-size: 1.5em;
+        top: -35px;
+    }
+
+    .response {
+        margin: 10px 0 0 0;
+    }
+}

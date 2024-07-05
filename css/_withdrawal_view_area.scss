@@ -1,0 +1,199 @@
+main {
+    width: 100%;
+    display: inline-flex;
+}
+
+.withdraw_container {
+    width: 70%;
+}
+
+.heading1 {
+    padding-left: 20px;
+    margin: 50px 0px 0px 50px;
+}
+
+.withdraw_window {
+    margin: 25px 50px 50px 50px;
+    height: 800px;
+    border-radius: 25px;
+    box-shadow: 2px 0 10px 1px grey;
+}
+
+.withdraw_container p {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.set_mode {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.heading2 {
+    margin-left: 100px;
+}
+
+.heading2 a {
+    color: var(--primary-green);
+    padding-left: 10px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+button {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    width: 150px;
+    height: 45px;
+    margin: auto;
+    font-size: 1.5em;
+}
+
+.withdraw_window .active {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.options {
+    width: 60%;
+    margin: 60px 20% 10px 20%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.options div {
+    font-size: 1.5em;
+    margin: auto;
+}
+
+.options .active {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.set_mode hr {
+    height: 2px;
+    background-color: black;
+    margin: 20px 10% 20px 10%;
+}
+
+.withdrawal_methods .method {
+    display: inline-flex;
+    width: 90%;
+    margin: 30px 20px 0 40px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px 1px grey;
+    height: 100px;
+}
+
+.withdrawal_methods .method .icon {
+    margin: 20px 0px 20px 25px;
+    min-width: 60px;
+    height: 60px;
+    display: grid;
+    justify-content: center;
+}
+
+.withdrawal_methods i {
+    display: block;
+    font-size: 60px;
+}
+
+.withdrawal_methods .method #mpesa .m-pesa_icon{
+    object-fit: contain;
+    width: 60px;
+    height: 60px;
+}
+
+.withdrawal_methods .descriptions {
+    display: grid;
+    align-items: center;
+    margin: 20px 0 20px 0;
+    min-width: fit-content;
+    height: 60px;
+    font-size: 1.3em;
+    padding-left: 20px;
+}
+
+.withdrawal_methods .descriptions .account_type {
+    font-weight: bold;
+}
+
+.withdrawal_methods .add_withrawal_option {
+    margin: 50px 0 0 20%;
+    background-color: var(--primary-green);
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    .withdraw_container {
+        width: 100%;
+    }
+
+    .options {
+        width: 80%;
+        margin: 60px 10% 10px 10%;
+        justify-content: space-between;
+    }
+
+    .descriptions{
+        width: 100px;
+    }
+
+    .method button {
+        right: 0;
+        min-width: 150px;
+    }
+}
+
+@media (max-width: 750px) {
+    .options {
+        width: 100%;
+        margin: 40px 0 10px 0;
+    }
+
+    .withdraw_window {
+        position: relative;
+        height: 1000px;
+    }
+
+    .withdrawal_methods {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .withdrawal_methods .method {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 200px;
+        margin: 10px 10px;
+    }
+
+    .withdrawal_methods .method button {
+        width: 60%;
+        border: 1px solid;
+        bottom: 0;
+        position: absolute;
+        margin: 20px 20% 20px 20%;
+        /* width: 100%; */
+    }
+
+    .add_withrawal_option{
+        position: absolute;
+        bottom: 20px;
+        width: 60%;
+        margin: 0 auto;
+    }
+    
+    .descriptions{
+        width: 60%;
+    }
+}
