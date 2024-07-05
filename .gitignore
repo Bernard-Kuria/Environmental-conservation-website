@@ -1,0 +1,51 @@
+# Ignore build output
+build/
+dist/
+
+# Ignore dependencies
+node_modules/
+vendor/
+
+# Ignore IDE and editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore package lock files
+package-lock.json
+yarn.lock
+
+# Ignore environment-specific files
+.env
+.env.local
+.env.*.local
+.env.*.production
+.env.production.local
+
+# Ignore sensitive or personal information
+secrets.yml
+credentials.json
+
+# Ignore backup files
+*.bak
+*.swp
+*.~lock.*
+
+# Ignore miscellaneous files
+.DS_Store
+Thumbs.db
+
+# Prisma
+prisma/*.db
+.env

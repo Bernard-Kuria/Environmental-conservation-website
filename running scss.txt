@@ -1,0 +1,10 @@
+When terminal doesn't work for scripts, run this: PS C:\> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+You: npm run sass:watch or npm run build if you don't have a css file
+
+How to include files:
+    "sass:seller": "sass --watch css/seller-acc.scss:css/seller-acc.css",
+    "sass:items": "sass --watch css/items.scss:css/items.css",
+    "sass:settings": "sass --watch css/settings.scss:css/settings.css",
+    "sass:withdrawal": "sass --watch css/withdrawal.scss:css/withdrawal.css",
+    "sass:chats": "sass --watch css/chats.scss:css/chats.css",

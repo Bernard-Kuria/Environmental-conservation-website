@@ -1,0 +1,64 @@
+{
+  "name": "e-nexus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon api/index.js",
+    "sass:watch-main": "sass --watch client/css/main.scss:client/css/main.css",
+    "sass:watch-map": "sass --watch client/css/map.scss:client/css/map.css",
+    "sass:watch-seller": "sass --watch client/css/seller-account.scss:client/css/seller-account.css",
+    "sass:watch-items": "sass --watch client/css/items.scss:client/css/items.css",
+    "sass:watch-settings": "sass --watch client/css/settings.scss:client/css/settings.css",
+    "sass:watch-withdrawal": "sass --watch client/css/withdrawal.scss:client/css/withdrawal.css",
+    "sass:watch-chats": "sass --watch client/css/chats.scss:client/css/chats.css",
+    "sass:watch-about-us": "sass --watch client/css/about-us.scss:client/css/about-us.css",
+    "sass:watch-help": "sass --watch client/css/help.scss:client/css/help.css",
+    "build-main": "sass client/css/main.scss client/css/main.css --style compressed",
+    "build-seller": "sass client/css/seller-account.scss client/css/seller-account.css --style compressed",
+    "build-items": "sass client/css/items.scss client/css/items.css --style compressed",
+    "build-settings": "sass client/css/settings.scss client/css/settings.css --style compressed",
+    "build-withdrawal": "sass client/css/withdrawal.scss client/css/withdrawal.css --style compressed",
+    "build-chats": "sass client/css/chats.scss client/css/chats.css --style compressed",
+    "build-about-us": "sass client/css/about-us.scss client/css/about-us.css --style compressed",
+    "build-help": "sass client/css/help.scss client/css/help.css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.1",
+    "nodemon": "^3.1.3",
+    "pg": "^8.12.0",
+    "prisma": "^5.16.1",
+    "sass": "^1.43.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.16.1",
+    "@prisma/engines": "^5.15.1",
+    "@supabase/supabase-js": "^2.43.5",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express-validator": "^7.1.0",
+    "nanoid": "^5.0.7",
+    "prisma": "^5.15.1",
+    "redis": "^4.6.14",
+    "uuid": "^10.0.0"
+  },
+  "generator": {
+    "provider": "prisma-client-js",
+    "previewFeatures": [
+      "prismaSchemaFolder"
+    ]
+  },
+  "prisma": {
+    "schema": "api/prisma/schema.prisma"
+  }
+}

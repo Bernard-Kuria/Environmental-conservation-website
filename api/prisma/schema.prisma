@@ -1,0 +1,191 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-1.1.x", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  //url      = env("LOCAL_DATABASE_URL_2")
+  directUrl = env("DIRECT_URL")
+  //pooling  = true
+}
+
+model User {
+  user_id    String @id @default(cuid())
+  email String @unique
+  username  String @unique
+  password  String
+  role User_role @default(USER)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  last_login DateTime?
+  
+  //Profile Fields
+  first_name String?
+  second_name String?
+  address String?
+  phone_number String?
+  bio String? @db.Text
+  avatar String?
+
+  //Relationships
+  listed_items   Product[]  @relation("seller_products")
+  purchases     Transaction[] @relation("buyer_transactions")
+  sales         Transaction[] @relation("seller_transactions")
+  reviews_given   Review[]   @relation("reviewer")
+  reviews_received Review[]   @relation("reviewee")
+
+  //Unique Constraint  for Profile
+  @@unique([user_id])
+}
+
+
+model Product {
+  product_id String @id @default(cuid())
+  title String
+  description String @db.Text
+  price Decimal
+  condition product_condition
+  category Category
+  subcategory Subcategory
+  seller_id String
+  seller User @relation("seller_products", fields: [seller_id], references: [user_id])
+  ceated_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+  status product_status @default(AVAILABLE)
+  transactions Transaction[]
+  //specifications Item_specification[]
+  reviews Review[]
+  images Product_image[]
+}
+
+model Product_image {
+  image_id String @id @default(cuid())
+  product_id String
+  product Product @relation(fields: [product_id], references: [product_id])
+  url String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+model Transaction {
+  transaction_id String @id @default(cuid())
+  buyer_id String
+  buyer User @relation("buyer_transactions", fields: [buyer_id], references: [user_id])
+  seller_id String
+  seller User @relation("seller_transactions", fields: [seller_id], references: [user_id])
+  product_id String
+  product Product @relation(fields: [product_id], references: [product_id])
+  price Decimal @db.Decimal(10, 2)
+  status transaction_status @default(PENDING)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+
+model Review {
+  review_id String @id @default(cuid())
+  reviewer_id String
+  reviewer User @relation("reviewer", fields: [reviewer_id], references: [user_id])
+  reviewee_id String
+  reviewee User @relation("reviewee", fields: [reviewee_id], references: [user_id])
+  product_id String
+  product Product @relation(fields: [product_id], references: [product_id])
+  rating Int @db.SmallInt
+  comment String? @db.Text
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@unique([reviewer_id, product_id])
+}
+
+enum product_condition {
+  NEW
+  USED
+  REFUBRISHED
+}
+
+enum product_status {
+  AVAILABLE
+  SOLD
+  PENDING
+}
+
+enum transaction_status {
+  PENDING
+  PAID
+  SHIPPED
+  COMPLETED
+  CANCELLED
+  REFUNDED
+}
+
+enum Category {
+  MOTHERBOARDS
+  PROCESSORS
+  MEMORY
+  STORAGE
+  GRAPHICS_CARDS
+  POWER_SUPPLIES
+  CASES
+  COOLING
+  PERIPHERALS
+  NETWORKING
+  OTHER
+}
+
+enum User_role {
+  ADMIN
+  USER
+}
+
+enum Subcategory {
+  // Motherboards
+  ATX
+  MICRO_ATX
+  MINI_ITX
+  // Processors
+  INTEL
+  AMD
+  // Memory
+  DDR3
+  DDR4
+  DDR5
+  // Storage
+  SSD
+  HDD
+  M2
+  // Graphics Cards
+  NVIDIA
+  AMD_GPU
+  // Power Supplies
+  MODULAR
+  SEMI_MODULAR
+  NON_MODULAR
+  // Cases
+  FULL_TOWER
+  MID_TOWER
+  MINI_TOWER
+  // Cooling
+  AIR_COOLER
+  LIQUID_COOLER
+  CASE_FAN
+  // Peripherals
+  KEYBOARD
+  MOUSE
+  MONITOR
+  // Networking
+  ROUTER
+  SWITCH
+  NETWORK_CARD
+  // Other
+  CABLE
+  ADAPTER
+  MISC
+}
